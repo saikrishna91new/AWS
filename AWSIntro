@@ -1,0 +1,108 @@
+AWS Training
+------------
+
+Before Cloud - After Cloud
+---------------------------
+Before cloud if you want to host a application werequired the below things
+1> Servers 2> Network 3> Applicatins 4> People to work
+All thee things will take time to complete the infra but after cloud we can do a setup quickly
+
+DATA CENTER: Whre we put all the server along with the network
+
+AWS INFRA:
+---------
+Data Center --> AZ --> Region(location) --> AWS
+
+Each Region has unique name and all regions are interconnected
+
+Services in AWS:
+----------------
+1> Compute (Ec2, Lamda)                                                     8> Management & Governance (Moniterning)
+2> Data base (Oracle, mango db)                                             9> Security, Identity and complainace 
+3> Storage                                                                  10> Analytics
+4> Container                                                                11> IOT(Internet of things)
+5> Application Migration                                                    12> Robotics                                            
+6> Developer Tools (DevOpps)                                                13> Machine Learning
+7>Network and content Delivery
+
+Additional to the above services we can have more but these are the importnat
+
+
+Compute:
+>EC@, Elastic bean stalk, Lambda
+
+Database:
+>RDS, Dynamo DB, Oracle, Elastice cache
+
+Storage:
+S3, EBS(HD), EFS(HardDrive)
+
+Container: 
+ECS, EKS(Kubernetes), ECR(Container resource)
+
+Application Servers: SQS, SNS both are mesaging
+
+Developer Tools: 
+>Code Commit(GIT), Code Articraft (jfrog or Nexus), Code Build (Jenkins), Code deploy( Spinnakar, Jenkins) , Code pipeline
+
+Network & Content Delivery: 
+>VPC(personnal Cloud), Route S3(DNS), Cloud front, LB, API Gateway
+
+Management and Governance : Cloud Watch (Monitering tools), Cloud Form watch(IAAS) used for automation with text file
+
+Securoty and compliance: IAM, Cognito, Certification Manager for certs, WAF (web application firewall)
+
+Analytics: Elastic search, Athena, Kinesis these are for analysing the data
+
+
+
+
+Services on prem                                |                   Services AWS
+
+On Prem Server                                  -                   EC2
+Machine, os, db for db                          -                   RDS (Single clinet)
+NAS,SAN, DAS                                    -                   EBS, EFSm s3
+Route, switch, LB                               -                   VPC, ELB
+Firewall, LDAP, SSO                             -                   IAM, Security Group
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+IAAS, PAAS, SAAS Differance
+
+IAAS(Infrastructure as a service)
+_________________________________
+Networking, Storage, Services, Virualization
+
+PAAS(Platform as a service)
+___________________________
+Networking, Storage, Services, Virualization, OS, Middleware, Runtime
+
+SAAS(Software as aservice)
+__________________________
+Networking, Storage, Services, Virualization, OS, Middleware, Runtime, Data, Applications
+
+
+
+
+
+
+
+
+
+
+
+
+
+
