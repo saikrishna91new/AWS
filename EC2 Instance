@@ -69,4 +69,28 @@ Spot: AWS will conduct bid for this 90% off but we have to give it back when AWS
 
 EC2 Security:
 
+EC2 is secured by SG (Security Group) by default no oter way to bypass it
+no way to connect out of SG even for owners
+owber has permission to change the SG settings
+Its nothing but a firewall
+
+What is firewall: its a security tool by default don't allow any traffic to the server, if we want to enter we need to open a door means need to open a port
+
+Ec2 User Data: installation we can do at the time of server creating 
+it is available i configuartion setting of EC2,, it is set of instructions
+
+
+
+
+
+EC2 Custom AMI:
+
+Instead of using the userr data every time we can customised we can use customised AMI id with pre installed softwares
+
+2 steps need to perform:
+1> Create a template:
+2>Create a image for that template
+
+we can use this ami id to launch the instance with the predefined softwares installed
+
 
