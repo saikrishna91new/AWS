@@ -1,1 +1,43 @@
+S3 : 
+Simple storage service
+We can store any thing here
+
+
+How to create:
+Console- Amazone s3 - create bucket
+Just uploadafter create
+Its validaity 100 years we don't lose data forever
+very less cost
+MAX : 50TB
+max limit for uopload: 100GB
+
+
+Sharing: 
+Share with others easily and can downlOAD EASILY
+Main users: netflix, amazon,icloud ..etc
+charges - 1TB - 1.75 indian rupees
+
+Use Cases:
+1> Online Storage
+2> Hosting static website so its understand http protocal and server it
+3> Will get a DNS ul and also we can buy a domain nameand forward to it
+4>Backup and DR wil be there automatically
+5>We can build the same in any other reason by tkaing the backup data 
+6> Own anlytic platform 
+
+
+
+S3  Fundamentals:
+
+1> Bucket
+2>Objects we can store
+3>Bucket name is globally unique
+4>https://bucket-name.zone.amazon.com
+5> Created at region level and accessible at same region
+6> Will ask to sleect tregion while creating
+7> Url can be accessible any where
+8>100 buckets per account
+
+
+
 
