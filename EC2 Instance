@@ -1,1 +1,72 @@
+Key Points:
+AMI/CPU/Memory/Storage
+
+AMI: Image id, This is an unique id for every imge.
+By default AWS provide images with ami id we can select them while creating the instance and for cloud formation as well
+
+Types of Instances:
+ 1> Compute optimised
+ 2> Meorey Optimised
+ 3>Storage Optimised
+ 4> General optimised
+ 5> GPU Optimised
+
+Storage: for storage we can use ebc, efs, s3
+
+Coonecting to EC2: we can connect in 3 ways like via browser and in putty and in cmd of windows
+public ip will be used to connect to the instnace
+
+in cmd of windows: ssh -i <sectret key path> user@public-ip
+
+
+How to stat and stop instnace: 
+
+Select the instance options: stop, start, reboot ..etc
+
+After every stop and start ip address will change
+After every reboot ip won't changed
+
+Terminate: same like stop we have terminate option in the same path
+
+Coonecting with browser : select the instance and click on connect
+
+via putty we need to have prive key use putty gen to convert pem to private key
+
+
+
+
+Instant Types:
+1> Compute Optimised: More CPU (c5)
+
+2> Memorey Optimised: R4, X1e (ram/X-term)
+
+3> General Purpose: t1, t2, t2.micro ..,m5 (tinyor turbo) (medium or main)
+
+4> Memorey Optimised:   h1 (hdd)/ i3 (iops)/ d2 (dense)
+
+5> GPU optimised: p3 (pictures)
+
+
+
+
+
+
+
+EC2 Pricing:
+___________
+
+
+1> On-Demand (very high)
+2> Reserve (50% Discount)
+3> Spot
+
+On-Demand: we can createand access and terminate when ever we want 
+Reserve:  at least one year for long term users and db
+Spot: AWS will conduct bid for this 90% off but we have to give it back when AWS needs it
+
+
+
+
+EC2 Security:
+
 
