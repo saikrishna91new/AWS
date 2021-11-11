@@ -1,1 +1,27 @@
+There are prive domin sellers for seling the domain name 
+it will take 24 hours to active out side 
+in aws it will take few min if we buy with aws
+
+
+Hosted zone: if we need to create or host a domain in  AWS we need to create one hosted zone
+aws - route53 - hosted zone
+hosted zone is used to configure the domain name
+for 10 different donmins need 10 different hosted zones
+
+
+We can route the domain name to the end application in 3 ways:
+
+
+domain name --> directly to s3
+domain name  --> lb --> ec2 instnaces
+domain name --> ec2 instance
+
+s3 will run only static application or html applications s3 can understand html
+if you want access the app in s3 bucket then domain name is same as bucket name other wise we can't able to access
+
+
+
+how to route the domain to s3 here 
+
+goto hosted zone and create a record and here provide where to forard the request and also provide the alias name either ip or lb names 
 
