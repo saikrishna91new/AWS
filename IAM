@@ -1,0 +1,92 @@
+IAM: Identity Access Manager
+----------------------------
+Its a security service 
+allows Authentication and authorisation
+Its a Global level resource its not related or boubded to any region
+
+IAM Steps:
+----------
+1> Login
+2> Check user access
+3>Check User permissions
+
+
+Criteria to create IAM Authentication:
+-------------------------------------
+USERS --> Groups --> Policy --> Roles
+
+Note: Policy to groups but roles don't assign to groups
+Role: is a set of policy and providing access for Service
+Service can't access other services by deafault with out IAM
+Roles adn policies are same as role is group of policies
+IAM is  feature which is free in AWS
+IAM provides shared access to theservices in AWS
+IAM provides: MFA Multi factor authentication
+IAM can fedearate with the existing LDAP so we can login with the existing users only
+
+
+
+IAM creationL
+
+1> Create a user
+2>Create a group
+3>Add user to the group
+4>Create a policy and assign it to group
+5>Activate MFA for root
+
+
+
+Note:
+New user don't have permissions by deafault
+Root credentials should never be shared
+Credentials won't be used in code
+Root user only use for intial setup
+
+
+
+
+AWS is responsible for only security of cloud but user has to responsible for security in cloud
+
+We can have 2 types of access for users:
+1> Console access (need account id to login to the console)
+2>programatic access (for terraform cloud formation.. access key required)
+
+
+we can change te users password in console select user --> seucirty credeatials
+
+
+Importnant poins:
+
+One user can be part of multiple groups
+2>group ppolicies applicatible to every user
+3>Policy is nothing but a json file we can read it
+4>policy can be assigned to user?? yes
+
+
+
+
+Roles: 
+Create a role first and select it while creating the serrvices like ec2. s3 ..et
+
+
+If any services doesn't able to access any other services first trouble shooting point will start from IAM permissions
+
+we can set the password strenth policeis like no of charectes and special charecters can a password caontain 
+
+
+IAM --> Account Setting --> Change password policy
+
+IAM password policise all should be in green
+
+1>Delete root access key
+2>Activate MFA
+3>Create individual users
+4>Group to assingn permiisions
+5>Apply IAM password policy
+
+
+
+
+
+
+
