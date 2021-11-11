@@ -47,4 +47,22 @@ we can create superate SG for ELB and make backend servers SG can only take requ
 
 
 
-High availaility: LB can be created at lease in two AZ's by default
+High availaility: LB can be created at least in two AZ's by default
+
+
+
+3 types of LB are available:
+
+1> Classic 2> Application (Http/Https) 3> Network (Tcp/Tls/Udp)
+
+Application LB:
+--------------
+Best for container based and microservices applications
+
+Network LB:
+-----------
+
+expensive, superast and servs only for ip based backend applications
+serves million req per sec
+
+
