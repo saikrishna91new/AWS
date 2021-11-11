@@ -1,0 +1,50 @@
+What is Domain name?
+Its a URL to acess the application externally from the browser
+
+
+How to check the ip address of the demina name? we can check it by ping or nslookup command
+
+
+What is the load balancer? 
+It balances the load to the backend servers to serve the request
+It knows the stats of servers always
+wiht LB no need to expose the ip of the server to the internet so it wil increase the securoty
+It will distribute the load to backend server equally or with mentions routing alogorithem
+
+ELB(Elastice Load balancer)
+
+in AWS it is called ELB
+
+
+Features of ELB:
+---------------
+
+1>Spread the load
+2>Single point of access
+3>perofm the health checks and remove the failed nodes called high availability
+4>Provide SSL for web servers
+5> Enable session sticky ness: when one user requet served by server next time the same request wil be forwarded to the same serer to improvve the performanace
+
+
+
+All the services come under VPC by deafault
+
+
+
+
+
+
+
+Why ELS ??
+
+Its a managed service, just create and use
+ 
+ELB --> Target Group --> Backend servers
+
+Need to add ip's to the target group
+We can add multiple target groups
+we can create superate SG for ELB and make backend servers SG can only take requests from that LB sg only
+
+
+
+High availaility: LB can be created at lease in two AZ's by default
