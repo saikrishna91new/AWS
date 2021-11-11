@@ -29,3 +29,4 @@ How to configure Route 53 with the LB:
 
 Create a record and select the alias name as application load ballancer and select the region
 it will display all elb
+
