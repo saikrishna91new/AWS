@@ -40,4 +40,38 @@ S3  Fundamentals:
 
 
 
+S3 Versioning:
+
+S3 supports versioning like after every cange old version will be stored intead of deleted to protect againest unintended delets
+
+S3 charges: 
+1> Depends on space you are using
+2> number of times request 
+3>Dat transfer charges
+
+s3 life cycle:
+--------------
+
+Data automatically moved to not reguler using data after some time this we have to mention in the console
+
+
+
+Security:
+
+>By deafult after creating the S3 bucket no one can access the bucket
+>we have to provide the permissions explicitly which is called external access
+>we can have access logs for S3
+
+
+s3 lifecycle:
+
+Instant: Standerd, Intelligent tieing, one zone
+
+Not instant: Glacier, Glacier depp drive (chepaest storage)
+
+
+
+>>Deleting th bucket:
+If we need to delete the bucket we have to empty it before
+
 
