@@ -1,0 +1,79 @@
+In Data base section we can read about two types of data bases 
+1> Relation DB
+2> Non Relational DB
+
+
+
+Relational DB                                            |                                 Non-Relational DB
+------------------------------------------------------------------------------------------------------------------------------------------------
+1> SQL DB                                                                                  1> Non-SQL DB
+2>Data stored in tables                                                                    2> No concept of tables
+3>Not designed for scaling (Horizontal)                                                    3> Designed for scaling verticle
+4>Fixed data model                                                                         4> Relaxed
+5>Slow responce time                                                                       5> Fast responce time
+6>Caching is expensive                                                                     6> In Memory cacthig
+7>Oracle, SQL, MySql,ProstageSQL,MariaDB,Amazon Aurora                                     7> Mango DB,cassandra, redis, Amazon Dynamo DB, Apache Hbase
+8>use key-value model                                                                      8> Used column wise stroing
+9>Users Amon, Netflix                                                                      9> Users Facebook
+
+
+
+
+Amazon Auroa is most used DB in AWS its very less expensive
+
+How to create? 
+AWS --> DB --> Create DB --> Select type 
+
+Its a managed service
+while creating the machine it is ask for machine type( free type, db sepcific)
+
+DB price charges depends on
+---------------------------
+
+1> Running time
+2> Storage
+3> No of requestss
+4>Backup
+5>Data Transfer
+
+
+
+
+We can't login to the instance created by the DB
+Backups are automatically taken for production for dtq and test we can give it as a option
+Storage automatically increase if request increase
+
+
+Life cycle is same as s3 it depends on the no of laste used days
+only one dns for the entire db
+
+
+Read replica:
+AWS create a copy of DB for read perpose which increase the performance
+for wrote reqiest will go to the primary one
+read replica can create in same az or different region
+there will be some millim sec delay between primary one and read replica
+Update will be happen in milisec 
+Multiple rea replicas we can set in auroar max is 15 and remining are 5
+Generally used for reports
+No capacity planning required bcz its automatic 
+
+
+
+Aurora propriate with mysql and sql and prostage
+its bit expensive
+5 time better than mysql and 3 times better than prostage
+
+
+Storage types: ssd, iops, Magnetic tapes
+
+
+Backup timings we can define like daily at 12 am like this
+upgrade time wil be 30 mins like that
+750 hrs free for 3 db instances
+
+end point and port will be displayed while selecting the DB we can coonect it through any cliesnt
+
+public acess needed for DB to connect with the clienst
+
+
