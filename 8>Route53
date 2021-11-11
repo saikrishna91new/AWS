@@ -25,3 +25,7 @@ how to route the domain to s3 here
 
 goto hosted zone and create a record and here provide where to forard the request and also provide the alias name either ip or lb names 
 
+How to configure Route 53 with the LB:
+
+Create a record and select the alias name as application load ballancer and select the region
+it will display all elb
