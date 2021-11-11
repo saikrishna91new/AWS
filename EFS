@@ -1,0 +1,45 @@
+EFS(Elstic File System)
+
+Its a shred drive
+Its a managed service use like create and attach
+Every one can access
+Usufull for sharing and making every one access
+
+
+Multiple ec2 instances can access same EFS its nothing like nfs mount points
+
+can we use S3 as EFS??
+
+S3 is a object store, if we need to update any doccument we have to download it and edit and re update it
+in EFS its file system we can edit and u[date when ever we needed directly in file system
+
+EFS: work with different AZ's
+
+Its a fully managed service
+
+Highly available,scalable and very expensive
+Backup is automatic AWS can take care the backup and all
+2 types of storage : ssd and hard disk (ssd is very fast and very high expensive)
+EFS is a SSD tyle 
+we have atleast one certification question in this topic
+EFS can be used in onprem servers also
+use security group to control access to EFS
+Itss automatically scale up 
+it has superate security groups for efs an ec2 for better secutiy perpose
+
+
+
+How to create:
+
+AWS --> Service --> Storage --> Create FS --> name --> Select AZ or Region
+
+
+we can atthach this EFS at the ec2 instnce
+the commadn is displayed in the attch section of EFS
+
+in the ec2 SG allown NFS protical from this EFS 
+
+in ec2 create directory annd aattach it to the EFS
+
+Its a shared services if it si attaached in one machine and file is created in it then we can see the same file in all other attached instances 
+for delete also same
