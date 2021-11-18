@@ -1,0 +1,36 @@
+how to use ec2 to rundocker container??
+
+ANS>> 
+1> create aec2 instance first
+2> update the ec2 instance
+3> System sudo enable docker
+4>register with docker hub
+5>from linux machine login to docker hub
+6>check with docker pull image
+7>run a nginx container and acccess via url
+8>willl never access app through docker container in real time 
+
+
+
+same like docker hub in AWS we can store images at ECR ( Elastic container registry)
+docker hub is public and ECR is privete owr own 
+in real time use ecr instead of dcoker
+its completly managed servces
+cntiner service will download images from here
+just create a image and upload it in ecr 
+it uses s3 only in the backend to store the images, it is taken care by aws
+our task is just create a repo and update it
+ECS/EKS (elastice container service/ Elastic kubernetes servvice) these two are the rochestration tools
+to manage multiple containers which is manged by AWS
+ecs - is completly owned by AWS
+eks - is not completly owned by aws , kubernetees is googlle's
+
+why eks?? if already existing application in kubernetes can move to AWS
+
+eks: just need to bring the configuration files and make the env ready no need to build the cluster of kubernetes
+
+
+
+
+
+
