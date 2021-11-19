@@ -1,0 +1,87 @@
+Synchronus communication:
+
+if there are 2 applications want to communicate a put the message at som where and b look at the message adn process it and put a msg and a will take it and put it to user,, this is
+happeniing in railways and all this is asynchronus communication
+
+what is asynchronus ans synhronus comunication??
+
+
+SQS:
+
+Simple Que service
+Applicatio to Application service
+
+Synchronus communication: app a directly send the message to app b then if load increase b will crash
+
+so to avoide this ques is came inot pictures
+
+a put a msg in ques and b application connectl to the que and read the mesg and take the approriiate action and put it back to the que this is asynchronus communication
+ques can handle large number of requests 
+
+we can enable auto scaling as per the ques then if msg number increased in the que then no of instances are automcatically created
+autoscaling rule is que length
+SQS is used by user deployed apps and aws serices as well for thecomunication 
+
+Its fully managed like just provison and use it
+No limit for the messages in the que
+Low latency milli sec processing time
+Possible to horizontal scaling auto scaling enabled
+Prodcuer who is going to put the message consumer who is going to consume the message
+Horizontal scaling in terms of consumer is based on the number of messages in the ques new instnaces created
+
+
+ex: 
+a mobile to upload pics and stored in the s3 bucket
+
+Creating a que: create a que provide name rest all defaults and save
+
+for access policy we can specify the iam user who can access this
+
+End points: wher to cnnect the que and read the message
+application team is use to connect to the que to read the messages
+we have option to test the ques (send and receive message)
+
+endpoints continuously cheking the ques for messages to take it 
+
+
+how to confgure s3 to send message??
+got to s3 and event notifications 
+select the scenarios
+event: send the message to SQS que
+here it will throw permission error like "before s3 can publis messages s3 shoukd ave permissions"
+we have to specify the permission to s3 to put the messages in que and talk with the ques
+how?
+
+go to que -- access plicy -- provide te permissions
+
+the message contains the event soruce (s3) what time it is, what is the event name object created and complte info of s3 object
+
+>> we can attach a service to this que which can receive this message and process it
+
+limitation on essage??
+while creating a que we could seet the max size is 256 kb
+if needed for the large we need to split and send and the destination need to assemble it
+
+
+
+2 types of ques:
+1> Standerd
+Order is not gurante not expensive
+2>FIFO (first in first out)
+Msgs deliverd in the order they received bit expensive
+
+
+<<<<<<<<<<<<<<<<SNS>>>>>>>>>>>>>>>>>>>>>.
+Simple notification service
+SQS can used btwn a and b like point to pint
+
+how a want to talk with b, c, d at a  time??
+here sns is used 
+Also called as topic, its a topic service by aws
+topic is if you put a messages the all the subscribers can get a copy of that message
+
+
+Create topic - name - remining as default and create
+
+
+
