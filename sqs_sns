@@ -83,5 +83,74 @@ topic is if you put a messages the all the subscribers can get a copy of that me
 
 Create topic - name - remining as default and create
 
+topic name extention is mandatory as .c4 
+
+Note: target c4 is only destination is ques
+From topic we can send a message to que also 
+
+
+What happens when you orde with amazon?/
+we added few item to cart and check out what is happening in the backend??
+it will check wether the items are available
+we get the payment confirmation and order notificationa and shipping notification all these things we will ge in parllel
+there are 3 different srrvice like pay ment, notification, shipping services which are happen in parleel how it is happening?? 
+this wil put a message in topic and that topic isassosiated to all the three services
+
+
+if we select standers topic support for subcriptions, subscription is who is going to take the message
+create topic
+goto subscriptsns add subscription
+we can also give our email id whichwe can get the mesage and need to confirm 
+go to subscrition and publish a message to test 
+
+there are multiple types of subscriptions like ques/mail ..etc
+we can provide multiple subscritionsat a time like que and mail same time
+we  can execut the lambda function
+Lamda is the function who is prcoessing the images, down time, thumbnail, format of image its some logic or soe code from aws which is server less
+Lamda is like ecs but not suitable for heavy use its time is only for 5 to 15 mns
+its very lite and small code runners
+its like a cotainer services
+its a aws servcei it wil take code from user and run it in container
+
+
+we can sedn the sending event type as https/text/https ..etc in subscriptn
+we can also attach the mobile number as well
+
+
+SNS- tosend notification to multiple receivers
+Its managed serice
+charges are based on the number of msgs that processed
+1 billion messages are free
+it is called pub/sub model
+publisher/subscribe model
+
+publisher to topic and subscriber receive
+
+use case: client -- s3 -- amazon sns -- aws lambda
+
+Thumb nail??
+Lambda function will creat the thumbnail for the events
+
+
+SNS also used for alerts and alarms
+-----------------------------------
+when alarm get intiated out that message in sns and subscriber can kick the auto scaling group and may be anothe lmabda function to restart and
+another lambda functin to send mail like this
+
+
+Use case3: Alarm to create ticket with service now
+
+
+
+
+SQS: one to one
+SNS: one to many
+
+most of the time they used together 
+all depedns on the application requirements
+
+
+
+
 
 
