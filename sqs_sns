@@ -152,5 +152,10 @@ all depedns on the application requirements
 
 
 
+In Que acknoledgement is definatly expectable provides ordering, guarantee deliery
+in topic we don't have acknoledgement provides ordering not gurante delivery
 
+in sqs consmer will continuously pools the que and if any thing find it will take the message and process it and delte that if the message was not processed
+we can define the time till how much time the message retain in the ques
+if the consumer if down for some time and other cosnukmer came up then it will take that message we won't loose the message
 
