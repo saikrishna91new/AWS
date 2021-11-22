@@ -1,0 +1,92 @@
+Virtual private cloud:
+---------------------
+
+Private cloud only for you no one can touch that
+one default vpc is there created by AWS
+
+VPC is a service and its free
+
+In real time we have different networks
+by default one VPC can't communicate with other VPC
+we can enable the communication if needed whihc is called vpc peering
+
+it is some type if isolation
+Router will help to speak with other VPC
+vip routter for vpc to internet
+
+subnet depends on no of AZ's
+vpc is a region scope and subnet is AZ scope
+there is one internal router by default we can't acess it
+vpc is some type of sagrigation
+
+IGW to conecto to the internaet so that we can connect to our machine via putty or ssh
+
+VPC is one network and subnet is one more network
+
+there are two types of subnets:
+
+1> Prvate subnet
+
+2>Public subnet
+
+
+Private subnet is to keep the secure and critical servers
+
+
+
+Rotung table:
+-----------
+Every subnet asosiated with a routing table it contains the infermation about the entire envirniment 
+All the communication happen through routing table only
+roting table contain the infermation about route to specific object like internet, db ..etc
+
+
+
+VPC -  sb1/sb2 - Route table - IGW - Internet
+
+Security Group:
+
+to protect the EC2 instance with in the subnet
+at the ec2 level and can't allow incoming traffic by deafult and all denied applicable by default
+Default SG in AWS
+
+VPC can span across the AZ's with the help of subnets
+
+
+
+CIDR Block :
+----------
+
+defines how many ip's needed in the vpc , we can check it in cidr calculator
+
+/16 - 65k
+/24 - 256
+/8 - 16 million
+
+
+
+TEnancy:  2 options 
+1> Default
+2>Dedicated
+
+in default server can launch in any of the host and its sharable
+in dedicated complete host is given to your instance,, and special charges are there 1 doller for eavery hour
+
+
+
+Deviding big network into small networks by using the subnet
+
+
+Private subnet:
+we can't connect to the IGW in routing table
+public subnet routing table can't be same as private subnet bcz igw not connected
+
+**note: if same cidr range not allowed with in the VPc
+
+
+
+
+
+
+
+
