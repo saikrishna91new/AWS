@@ -1,0 +1,40 @@
+Its a monitering service by AWS
+by default AWS monitering will be enabled 
+we can enable for different metrics
+will help to create alerts and alarms
+can create dashboard for graphical display
+basic monitering will trigger for every 5 minute we can reduce this time line but its chargable, we can enabl this for critical services
+we can moniter the application logs for specific error and create alarms
+
+Cloud watch metrics:
+-------------------
+1>Memorey utilisation
+2>No of request
+3>Response time
+4>Coonections for db
+
+Cloud watch concepts:
+-----------------------
+Cloud watch dashboards
+Cloudwathc alarm
+Cloudwatch logs
+Cloudwatch metrics
+Cloudwatch events
+cludwathc application monitering   (new addition)
+cloudwatch insight
+
+
+
+
+secanrio:
+
+if one app used to upload images from the mobile, then we have one lamda function to resize it how to do that??
+when ever we upload the image one event trriggers , we can process a lmbda function with the help of that event. and resize the image
+this is goint to be automatic
+
+
+while using the aws we don't need any other monitering tools as there is one default 
+
+
+
+
