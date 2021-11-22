@@ -24,7 +24,7 @@ ECS/EKS (elastice container service/ Elastic kubernetes servvice) these two are 
 to manage multiple containers which is manged by AWS
 ecs - is completly owned by AWS
 eks - is not completly owned by aws , kubernetees is google's
-
+ECR is region specific
 why eks?? if already existing application in kubernetes can move to AWS
 
 eks: just need to bring the configuration files and make the env ready no need to build the cluster of kubernetes
@@ -86,25 +86,94 @@ Container can run only inside a task no task no cotainer and no service no task 
 
 With in cluster we will have apps, nothing but services.. in apps need some containers those contaeinre run inside tasks
 
-how did you create task .. this info is hold by task defination like 
+how did you create task .. this info is hold by task defination -- like what images to run, what containers to run and what the cpu and memory need to allocate, what ports you 
+want to open
+
+we need a task defination to run a task is must
+we want to run 10  containers we need 10 tasks
 
 
+flow: Cluster - host- service (app) - task -- container
+
+Each task can hold multipl contaires but all tasked has to be have same number of containers
+ECS closly ntegrated with ECR to get the images from ECR
 
 
+Creating ECS :
+
+step1> Add image to the ECR
+how to update image to ecr: login to ec2 and paste the commands seen in ecr section and provide credentials to update
+here for ec2 create a role and assign to ec2 we are using
+go to iam - roles - amazon ec2 ecr pull access - select, create and assign it to ec2 instance, if role was not there unable to find the credentials, if role is there no need ot 
+ave the credentials
+ec2 and ecr are shuld be in same region to avoid errors and better output
+we can upload the image from our mahine as well
+install docker and get ready your image and update to ecr with the commands given at ecr
 
 
+step2> AWS --> ECS -->  Create task defination
+options: ec2, fargate, or your own machine
+select fargate
+task definationname
+Role : default ecs task execution role (it will connect to all the services required, its like premission kind of stuff)
+Network role : default
+Task Execution role:
+os type:
+memorey: 
+CPU:
+Add Container:
+container name/ image address in ECR/ paste the uri of the image from ECR
+specify the limits: memory limitations
+Port Mappings:
+health check:
+env variables:
+strage:
+logging:
+click on add and create
 
 
+step3: Create a cluster
+3 templates:
+managing (only networking)
+ec2 users and neteworking
+ec2 windows networking
+
+select managing only networking
+create cluster
 
 
+step4:Service Creation
+-----------------
+
+view cluster - create - 
+launch type : fargae
+os : 
+task defination:
+service name 
+number of tasks:
+select vpc and subnets:
+security group:
+assign public ip:
+assign LB:
+select auto scaling: specify min and max
+there is a role assigned for auto scaling if not auto scaling not work/we can attach our own role as well
+Scaling polisy: default
+policy name:
+target value:
+cpu utilistion for autoscaling:
 
 
+if every thing is good services is running now
 
+how to test the container: take the ip from the container and try to acess the url
 
+if we want to increase the task capacity or decrease or stop
 
+go to run new task in cluster and provide the details
 
+all the containers are behind a firewall
 
-
+we can add lb to this ecs and add that lb to route53 to have domain name
 
 
 
