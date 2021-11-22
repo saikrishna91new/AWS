@@ -42,6 +42,22 @@ AZ's are by default taken in LB:
 slect target group: if not there create new instantly it will create automatically
 select min and max instances:
 add notifications: create the topic and provide the emain id and selet the scenarios when to trigger the mail
+review and create auto scaling
+
+
+with the above setup we have created the LB and target group and ec2 servers
+we would have get the mail at the time auto scaling
+we need to confimr the subscriptionin the mail to get the mails
+
+
+we can add ec2 servers to the auto scaling group
+desired state : when no traffic desired to be there
+
+if want to update the auto scaling group we can create the new launch configuration and update it to the existing auto scaling group
+we can't alter the existing group in the auto scaling group
+
+
+When you delee the ASG everything created by the ASG will be terminated and removed
 
 
 
