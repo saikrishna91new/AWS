@@ -175,8 +175,8 @@ all the containers are behind a firewall
 
 we can add lb to this ecs and add that lb to route53 to have domain name
 
-
-
+To delete the entire setup delet the cluster
+in cluster we have a small dash board to see the homay tasks/services are running
 
 
 
