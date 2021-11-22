@@ -20,14 +20,65 @@ cntiner service will download images from here
 just create a image and upload it in ecr 
 it uses s3 only in the backend to store the images, it is taken care by aws
 our task is just create a repo and update it
-ECS/EKS (elastice container service/ Elastic kubernetes servvice) these two are the rochestration tools
+ECS/EKS (elastice container service/ Elastic kubernetes servvice) these two are the orchestration tools
 to manage multiple containers which is manged by AWS
 ecs - is completly owned by AWS
-eks - is not completly owned by aws , kubernetees is googlle's
+eks - is not completly owned by aws , kubernetees is google's
 
 why eks?? if already existing application in kubernetes can move to AWS
 
 eks: just need to bring the configuration files and make the env ready no need to build the cluster of kubernetes
+no need to spend so much of time to create the env
+it simplifies the migration process from kubernetes to AWS its kind of a drog and drop
+
+in ECS no need to create ec2 instances fir containers
+
+ECS
+----Elastic container service
+
+Earlier one signle app on weblogic/webspere and a db and whole app using the db which called monolythic application now it changed to microservices they superate out 
+instead of having one big application, superating them out as login as one app, cart is other, payments is other like this partitions and every application server runs in
+a different server with own database, what is the benfit of having this??
+
+1> Scale out: for monolythic application we have more load is for cart or payment only but ifwe need to scale up the application need to run all the services as that 
+is the single application which causes cpu and memory waste as they are doing nothin,, in micro services we can scale out only needed servies whih has high load which reduces
+cost for resources 
+
+2> The aboce seario scale out is going to be automated that will be in less time like a couple of seconds and stopped if traffic reduses
+
+3>Container is light weight and supre fast
+
+>> ECS is AWS cntainer services whihc help you to run caintainer services, its take care of starting and stopping the services
+>> No additional charges for ECS but pay for the resource like EC2 and EBS
+
+
+
+Running models:
+---------------
+1> EC2   2> FArgate (serverless) 3>EKS
+
+EC2>> with this appraoch headache to update os and vulnerabilities, it is expensive bcz ec2 hass to run all the time even though containers are not running
+
+Fargate>> AWS run our container at some whrer best option for container,,,  we wont be able to login into the machine, less expensive bcz when containres are
+running then only charged.
+
+EKS>> kubernates maintained by AWS
+
+
+,,,so ecs and eks are server less containre services at the end no need to provison the infrastricture
+
+
+ECS is simple then EKS
+
+
+
+
+
+
+
+
+
+
 
 
 
