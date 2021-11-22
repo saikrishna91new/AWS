@@ -60,6 +60,76 @@ we can't alter the existing group in the auto scaling group
 When you delee the ASG everything created by the ASG will be terminated and removed
 
 
+we can add triggers to activiate the ASG
+
+dynamic policies:
+
+asg - automatic scaling -dynamic scaling policy
+
+target tracking scaling:
+no of reques: 30 or 40
+
+Here ASG create a new instacnce if there are 50 instance
+we can the no of requests are LB level metrics
+
+
+
+ASG will uses the monitering cloud wathc in the backend and will get a alarm when target reached, we will get the mail.
+we can see the ASG flow log with all the details what is going to be happen by ASG
+pooling period is 5 mins that ASG consider before launching the instances
+we can change the desired no of servers in the ASG to reduse te servers instanctly
+
+
+scaling policies:
+-----------------
+
+3 different scaling policies
+
+1>Dynamic scaling
+2>Predective scaling
+3>scedule scaling
+
+
+Dynamic: based on cpu utilisation , user load , network traffic
+
+Predective scaling policy: if we want every monday 9 we have peak traffic for the app we need full capacity at 9 am 
+every friday after 5pm no one can access so we can give min capacity
+
+scheduled: Want to get teh no of instance available at specifc sheduled time
+
+
+
+
+we can edit te dynamic policy
+
+
+EC2 Launc template:
+1> AMI
+2>nstance type
+3>ec2 user data
+4>EBS volumes
+5>Security Groups
+6>Key pair
+
+
+
+ASG contains:
+1> Launc configuratin/template
+2>Netwrk & subnets
+3>LB info
+4>Group size (min/max/desired capacity)
+5>Scaling policies
+
+
+desired capacity we can chagnge it based on the load and utilisation
+
+
+
+
+
+
+
+
 
 
 
