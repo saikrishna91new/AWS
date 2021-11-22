@@ -1,0 +1,57 @@
+Auto Scaling :
+This service used for EC2, ECS, 2 db (Aurora and dynamo db)
+
+What is Auto scaling: 
+It add more servers if needed and remove servers if not needed its all based on the demand or can called as load
+
+Load means number of requests, cpu, network precentage
+
+How autoscaling works??
+
+scale out/ scale in:
+-------------------
+Scale out: to match in increase load
+Scale in: to a match a decrease in load
+
+Advantages of Autoscaling: by auto scaling output time will increase and cost reduces because of servers decommision after the load decreases
+
+
+
+What is Launch configuration Template??
+it used to tell what kind of server, whihc ami want to use, we can use own ami to get the instance along with the application, which sg, which LB, which Target group al these 
+things attached to this launch template
+
+create launch configuration in auto scaling group and attach it
+--------------------------------------------------------------
+
+name:
+select AMI: (Mostly customised AMI we wil use)
+select Key Pair or create a new key pair:
+Network Settings: select the SG
+Remaining all are defautlt
+Launch template
+
+How do you create autoscaling group???
+
+go to EC2 - auto scaling groups - 
+we need launch coonfiguration for this select the template :
+where do you want need to create instance: select all AZ's
+
+Create a Load balancer: create a new load balancer
+AZ's are by default taken in LB:
+slect target group: if not there create new instantly it will create automatically
+select min and max instances:
+add notifications: create the topic and provide the emain id and selet the scenarios when to trigger the mail
+
+
+
+
+
+
+
+
+
+
+
+
+
