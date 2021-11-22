@@ -124,6 +124,29 @@ ASG contains:
 desired capacity we can chagnge it based on the load and utilisation
 
 
+Dynamic scaling polices:
+-------------------
+
+1> Target tracking scalling:
+Based on specific target value
+eg avg cpu or reuest count
+
+
+2>Simple scaling:
+Based on cloud wath alarm
+if cpu is 70% add 2 instacen and <30% remove 2 instances,, we can decide here 
+
+
+3> Step scaling:
+
+Based on cloud wathc alarm but configure compleex rules
+
+eg : add 1 ec2 bwn 70 to 80%
+add 2 if cpu is 80 to 90%
+
+
+
+
 
 
 
