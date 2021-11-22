@@ -62,13 +62,32 @@ EC2>> with this appraoch headache to update os and vulnerabilities, it is expens
 Fargate>> AWS run our container at some whrer best option for container,,,  we wont be able to login into the machine, less expensive bcz when containres are
 running then only charged.
 
-EKS>> kubernates maintained by AWS
+EKS>> kubernates maintained by AWS both ec2 nd fargate are available
 
 
 ,,,so ecs and eks are server less containre services at the end no need to provison the infrastricture
 
 
 ECS is simple then EKS
+
+
+
+ECS concepts:
+-------------
+
+Task Defination:
+Task
+Service
+Host
+Container
+
+Task defination: 
+Container can run only inside a task no task no cotainer and no service no task and no cluster no service
+
+With in cluster we will have apps, nothing but services.. in apps need some containers those contaeinre run inside tasks
+
+how did you create task .. this info is hold by task defination like 
+
 
 
 
