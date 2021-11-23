@@ -37,6 +37,76 @@ while using the aws we don't need any other monitering tools as there is one def
 
 insights allows us to write quiries to get the data we want
 
+in mircro service architechure large application is devided into small applications so every request need to pass through many application to complete
+every service run in its own continer
+if there is a problem its very difficult to find out where it fails?? so we go with application monitering
+it should tell where your request is going how many micro services its passing and which miicro service taking how much time and which failed and why it failed
+
+
+
+
+Dashboards:
+Gives you simple view of your applicaton doing this moment like failure, responce time, cpu  ...etc
+
+Creating the dash board:
+-----------------------
+
+create dashboard : name : create
+aws cloud watch - dashboard - create dashboard
+Name:
+Configure:
+selet cpu and ec2
+we could see all the ec2 instanses we have created still now
+like this add widgets to your dashboard
+
+
+
+we can select cpu, lb resource, error messages 404,500 etc
+we can go back to year as well to see the metrics to track the issues
+dash board is global region can monitoracross all the regions
+
+first dash board is free after $3 for 3 dash boards
+
+
+we can create alarm for any activites like if cpu is 50% create alarm and requests are > 500 create alarm .. etc
+
+based upon these alerts we can asign tasks for the ASG group like ec2 restarts and all
+
+how to create an alarm??
+
+Cloud formation - create alarm -- select metric - give avg value metri - action to take (optional)
+
+
+Cloud watch logs:
+------------------
+
+Monitering ypur application logs
+in real ev logs should be moniterrd for application logs
+Continuously moniter the logs and trigger an alert if it find anything
+
+store,monitor and access log files from ec2, Rote53, Lamda, ECS, beanstalk...,etc
+
+
+by deafault AWS can not write the logs to cloud watch
+
+remining serverices are automatically send to cloud watch
+
+inalarm state wil display if alarm triggered 
+
+
+Log group:
+---------
+
+By default log group will be created for every service and we could see the logs inside it
+it should be in xml format
+we can find it in cloud watch/logs/
+
+
+
+                                                                                                                                                                                                                                                                                          
+
+
+
 
 
 
