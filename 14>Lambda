@@ -38,12 +38,12 @@ use cases:
 1> serverless log  monitering: for any app if we need to moniter the hung thread then create a event alarm and target is lamda if that alert triggerd , it avoide
 the contiinuous monitering
 
-2>Server less jobs: eg: if in amazon acnt sagrigate theusers about to expire their subscription and send them notifications these type of jobs
+2>Server less jobs: eg: if in amazon acnt sagrigate theusers about to expire their subscription and send them notifications these type of jobs or clearing the cache
 
-3> Serverless website
+3> Serverless website: compute, content/app , db, entry point, security services(cognito) all are server less
 
 4>Image and vido processing: to conert the images uploading in s3 and eg a vido quality will be changd in mobile, laptop and tv basedon the item we are using this can be done 
-by lamda
+by lamda also clled creating thumb nails:: like changes the vidoes and images as per the format
 
 5> Automated backups: if we need to take backup like dbs based on the utilizations or speified time
 
@@ -52,6 +52,61 @@ by lamda
 7> Log analytics/ security alerts
 
 8> Processing s3 objects
+
+
+
+Types of Lamda functions:
+------------------------
+1> Blue print (predefined functions)
+2> Own code
+3> Container
+4>applications predefined
+
+select blue print
+select python
+Role would be created automatically
+create function
+and upload the python code here either in the zip file or s3 bucket ur
+
+update an alrm for this lmbda to rigger
+*****there is a test option here to test the lamd function********
+
+its is logic and lamda execute that logic,its devolerps teamaction
+
+How to assosiate the event:
+
+go to lamda -- add trigger 
+select service where t trigger
+select s3 
+select the bucket
+ (we can add this from the resource as welllike s3, lb and ..etc)
+select the event type
+add
+
+go to moniter to check when it is executed, we can see the execution time, allocated memorey , used memory .. etc
+we can test as well and ceck the outut timeing and memory
+it should be crerate a log group in the cloud watch
+
+
+destination in lmda function:
+
+What need to be done after the execution of lamda , like sending mail , sending to a que or send it to a othe lamda function
+the mail notification of lamda shuld be in json format with all the details
+
+
+
+API Gateway: Service by AWS like lb for lamda functiond and microo services,, it is a entry point for microservices
+What is API??
+
+Help you quickly get a uri to acces the lamda function,,like in a minute we can give access,, so one lmda can be accessesible from othe function
+
+create api - region - lamda name  -name -next till create
+will get an url to access the lamda function which can use to access this service
+
+
+
+
+
 
 
 
