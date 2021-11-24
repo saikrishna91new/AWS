@@ -104,6 +104,10 @@ create api - region - lamda name  -name -next till create
 will get an url to access the lamda function which can use to access this service
 
 
+it maintains the backedn serever inferation
+basically api gateway give an event to lamda function
+
+we can access he lamda through the domain name as well by pointing the route53 to API gate way
 
 
 
