@@ -102,6 +102,15 @@ it should be in xml format
 we can find it in cloud watch/logs/
 
 
+How to moniter the logs in log groups??
+
+select the essage string and tell that when ever we get that msg alarm should be created
+
+log group -> metric filter - create metric filter -> give string to search, give name -> create metric
+
+After creating the metric create an alarm and provide threshold, configure email, alarm name >> for logs
+
+
 
                                                                                                                                                                                                                                                                                           
 
