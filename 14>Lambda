@@ -1,0 +1,60 @@
+Lambda is a server less service
+Its a comppute service like ec2 d/f ec2 and mada is its server less no need to provide infra just give the code to lamda
+its like ELB but in ELB  also need to provison ec2 service
+Lamda is cotainerised, run the code in container
+we can see nothing like contianers, servers in lambda
+Limit on lamda: if your app is run more than 15 mins or more than 2 gb then lamda is not an option
+
+
+EC2                 -                                                       lamda
+Virtual servers                                                 Virtual functions
+scaling means adding servers                                    Compltly automated based on the load 
+
+Lamda designed to run simple and short application and its event based
+event is any action like uplodaing image, send a message like it should be a action
+Lamda funtion wont run all the time only run when there is an event and after the execution it will exit, unkie ec2 which run always
+
+Serverless services : db, storage, sqs, sns ..etc which called managed services no need to prive any infra
+ec2 is user managed services we need to provison the infra for servers
+
+Lamda charges as millisec for the run time
+
+eg: if high cpu is ther we need to restart the ec2 by lmda, but lamda won't moniter the ec2 how it restat??? aws moniter and create alarm and target for alarn is lamda
+function here
+
+AWS monitering -> alarm - target - lamda
+
+
+free for i million request and 3.2 million sec of compute training
+
+lamda can get event from every service on AWS available
+max  available mem is 3 gb for lada
+max time 25 mns
+zipped: 50mb, unzipped 250mb console 3 mb
+temorary memory : 512 mb
+
+lamda function scale upto 1000 container for request 
+use cases:
+1> serverless log  monitering: for any app if we need to moniter the hung thread then create a event alarm and target is lamda if that alert triggerd , it avoide
+the contiinuous monitering
+
+2>Server less jobs: eg: if in amazon acnt sagrigate theusers about to expire their subscription and send them notifications these type of jobs
+
+3> Serverless website
+
+4>Image and vido processing: to conert the images uploading in s3 and eg a vido quality will be changd in mobile, laptop and tv basedon the item we are using this can be done 
+by lamda
+
+5> Automated backups: if we need to take backup like dbs based on the utilizations or speified time
+
+6> File confertion: if one app only takes json then convert the xml to json
+
+7> Log analytics/ security alerts
+
+8> Processing s3 objects
+
+
+
+
+
+
