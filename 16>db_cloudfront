@@ -1,0 +1,124 @@
+DB 2 types 
+1> seuel (structured)
+2>No sequel (Non structured)
+
+Dynamo db is no sequel data base
+server less
+its also stored in tabler format only but not in sequencs and no perticuler keys to get data
+Dynamo db is aws db and managed by AWS only
+High available by default multipl AZ's
+exremily fasr - single disit milly second max up to  9 sec
+auto scaling: millions of scond per second
+All we need is create a table for dynamo db which is very simple
+How to create??
+console - dynamo db - create - name - spicify one primery key like id or any thing which is relevant
+
+
+No limits on table size, storage is unlimited
+No Down time its always available
+
+
+Use Cases:
+----------
+
+
+chnaging the table column is difficult in relation db
+but we can easily add in non re;ational
+
+
+dynamo db free tier:
+25GB storage, 2.5 million read req/ 1gbdatatransfer out
+
+charges :no of read, requests and write and also how much data you are storing
+
+2 capacity planning 1> on demand (based on the load) unknown traffic 2> provisioned (in advance) known traffic
+
+
+dynamo db:
+
+each table has a primery key/ sort key
+table can have many items rows
+each row has no or atributes values
+
+
+
+DAX (Dynamo db accelerator)
+--------------------------
+Its a caching service for dynamo db
+Application looks into cache if need data, if cache is not available then loaded from amzon db
+micro sec responce time
+scale to millions of request for secons
+
+Api: exposing  the app to public
+provide acceess fron one app to anotr 
+api should take predifined inputs and give the appropriate output
+
+Api Gateway: to expose the api we use api gateway
+
+
+
+while creating a table partionis mandatory and it wil be our maild id
+
+read andwrite caapacity setting: ondemand/provisioned
+ondemand : no need to give inputs
+provisioned : need to give in the for of units
+
+read capacity is 10 : 10 reads can happen parllely
+write capacity is 10 : 10 write can happen parlley
+
+
+by default the dynamoo data is encrypted no need to sppent amount
+
+
+Cloud front:
+-----------
+
+
+CDN (content delivery network service)
+
+there is a bucket to keep their data
+
+usually in prime if one video got uploaded then all the users can access the same s3 bucket at a time to wathch in with out cdn
+it causes more time bcz of band width
+
+Amazon created edgelocation to avoid this
+the object copied to ll edge locations
+
+
+edge location is like data center with lot of processing power, storage
+
+so if one indian access this vido the vido will be copied to the edge location wihihc is near to him
+so user can access the video from there then response time increased a lot
+
+
+cloud fron will come between you and s3 bucket and user
+wil keep the conetent close to you by copying the data to edge location
+
+not only movies any thing can be used with cloud front
+it can get data from lb , ec2 andecs cluster thes are called origons fro cloud front
+origin is from where cloud front get the data
+not mandatory it will increase the responce time but very expensive
+
+
+cloud fron wil check the data is availabe in cache or not intiatlly if not take the data from the origion and save it cache as well
+
+
+can serve both dynamic and static content from different origin
+
+cloud front come before lb and after route 53
+
+user - route 53 - cloud front - lb of the closest region
+
+makes your sute reliables sad scalable
+
+create cloud front distributio - add s3 bucket asorigin - reming asdefault - create
+
+cdn : netwrk of serers to provide faster content delivery
+
+
+
+
+
+
+
+
