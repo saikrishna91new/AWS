@@ -1,0 +1,117 @@
+protect data in transmission
+encrypt and decrypt data by using a certificate
+only the client and server whoo are exchanging the data can do this encryotion and secryption
+
+If encryotion is not there some one can hace in between the network
+
+Here client and server will encrypt and decrypt data with a KEY
+Client will share the key with server, hacker can get the key but never open it bcz it again encrypted
+
+there er 2 keys : 1> Public key 2> private key
+
+Private key can't be shared it ill be with server, so no oter  decrypt
+
+if any thing lock with publick key only private key will unlock it
+
+client generate a random key and locked with public key and send to public key  and srver unlock it with private key
+
+this is called asymetric
+
+symetric:Same key for both encrypt and decrypt
+Asymetric: Different keys fro encrypt and decrypt
+
+AWS is ssl enabled
+
+Certificate MAnager: allow yu to create a cert 
+
+we can install ssl to LB
+
+browser - LB -ssl
+browser - server - non ssl
+
+bcz once req is reached to lb then it will be in your AWS vpc
+
+on onprem server to enable ssl - create csr - send it to CA - validate req and provide certs - copy it to server  and make configuration
+need to keep monitering the certs as the cert has validty date if cert is expire nothing workk and difficult to moniter all the certs
+
+in AWS certificate manager all are automaric like renewal of certs no need to manage them aws will manage
+no need of csr and signed bcz aws it self a CA it will issue certs
+
+How to enable ssl at LB:
+
+Create a certificate:
+go cert manager - request a public cert - give the domain name as route s3 - request - validte after creation
+
+attach this to LB
+
+go to LB --> Listener --> we can add or update the listener --> change the protocal to https --> port is 443  --> add the certificate to this domain 
+select action --> select the target group too forward ... thats it.
+
+betweenbrowser and lb is ssl and lb and server is no ssl that is enough for the security
+
+
+Certtificate Manager:
+----------------------
+
+Allow you create, manage and deploy ssl certificate for use with in AWS
+Integrated  with elb, cloud front, lb, api gateway so we can esily integrate
+handleautomatic cert renewls
+
+
+
+
+Secret Manager:
+---------------
+to store the passwords
+no need to write down the password inside app foor db and all its not safe to put it in app
+app will make a call to this secret manager and get the passwrd on the fly
+if any password need to change secret manager will change the password for db and placethe updated one in secret manager from application looks for the password
+benfitss:
+make sure that password are rotated we mention this timing 
+consle - secret manager - mutiple options for type of password -- select - secret name -- automatic rotation (selet time) can execute lamda function as well -- will
+provide the code for the application to access secret management
+
+1 secret - 40cents - halfrdoler per mnth
+
+developer related stuff
+
+
+KMS:
+Key management service:
+to provide security for the dat you are uploading to s3, ebs with the keys
+will encrypt the data
+
+key management - type (symetric/asemetric) -  region type single or multiple - name - select the thig who can use tis key(permission) - finish
+
+we can't change the key configuration once it created 
+
+asymetric will take time
+
+
+
+test create a bucket and enable default encryption and s3 by defult has one key  here select a key 
+
+data will be ebcryot at both rest ad transit as well
+
+
+ kms has 2 encryption methods: 
+ 
+ client side : user only enrypt and send it to s3
+ server side : just give the data to server and server wil encrypt it and store
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+red shift???????
+ 
+ 
+
+
