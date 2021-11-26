@@ -1,0 +1,94 @@
+we can login in 3 ways
+1? console
+2 command line
+3sdk
+
+
+
+command line:
+
+easy to install and support all services
+super fast no need to navigate in command line lke in console
+creation time is same in both command line and console but navigation tie is less in cmd  line
+so fast when creating multiple resource
+
+linke to create cli:"
+
+wget https://awscli.amazonaws.com/
+
+
+awss --version > to check the version
+
+
+
+Configuration:
+--------------
+
+we need to provide user id and password
+ command:: aws configure
+provide acesskey id, pwd, region , output format (json/yaml/text)
+
+
+
+>>aws s3 ls  to list all s3 buckets
+
+aws srvie operation parameter
+aws s3 help
+aws ec2 describe instance
+
+
+
+cnfigure credentials>> not with root account
+console - iam - add users - name, select both  acess key and consolr - adin access - creat accexx key 
+aws s3 delete
+asw s3 remove
+aws s3 cp <image_path> bucket name
+
+
+
+aws s3 sync command refferance
+aws s3 sync. <bucketname>	> to snc all images in the current directory
+
+
+Cloud formation:
+----------------
+
+Infrastructure as a code solution from the AWS
+we can give all the resources in the template 
+
+eg if we need the infra today and not for tomorw and needed again after two days back the will go throw cloud formation will take less time other wise through cosnole 
+it will take more time to do all these provisioning
+
+we can write what infra we want in one file 
+declerative: we just tell what to create not how to create
+
+
+
+
+terminology:
+
+Template, stack, Change set
+
+templateL: where you define your instance 
+stack : when we need to create it wil create a stack in s3
+
+we can place it in git hub
+folow the order exactly in the template file
+if nay thing fails it will delete the entire set up
+
+
+
+cloud formation - stact- template is readey - upload a file - create stack
+we need to update template s3 manully from there aws wil take it
+
+in stack demoo templates in s3 
+whicle cretaing  the template will ask for db name, useid, password ..etc
+
+if we remove the stack all the resources it has created also deleted
+
+beter not to go for stack when creating tthe shared resources
+
+
+
+
+
